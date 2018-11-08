@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainElectric">
+
+    <Button
+        android:id="@+id/id_btn_ohm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="67dp"
+        android:layout_marginLeft="67dp"
+        android:layout_marginBottom="9dp"
+        android:text="@string/res_btn_ohm"
+        app:layout_constraintBottom_toTopOf="@+id/id_btn_watt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_btn_ampere" />
+
+    <Button
+        android:id="@+id/id_btn_ampere"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="3dp"
+        android:text="@string/res_btn_ampere"
+        app:layout_constraintBottom_toTopOf="@+id/id_btn_ohm"
+        app:layout_constraintStart_toEndOf="@+id/id_btn_volt"
+        app:layout_constraintTop_toBottomOf="@+id/id_btn_volt" />
+
+    <Button
+        android:id="@+id/id_btn_volt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/res_btn_voltage"
+        app:layout_constraintBottom_toTopOf="@+id/id_btn_ampere"
+        app:layout_constraintEnd_toEndOf="@+id/id_btn_ohm"
+        app:layout_constraintStart_toStartOf="@+id/id_btn_ohm"
+        app:layout_constraintTop_toBottomOf="@+id/id_txtView_calc" />
+
+    <Button
+        android:id="@+id/id_btn_watt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginLeft="34dp"
+        android:text="@string/res_btn_watt"
+        app:layout_constraintBottom_toTopOf="@+id/id_btn_kwh"
+        app:layout_constraintStart_toEndOf="@+id/id_btn_ohm"
+        app:layout_constraintTop_toBottomOf="@+id/id_btn_ohm" />
+
+    <Button
+        android:id="@+id/id_btn_kwh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="34dp"
+        android:layout_marginRight="34dp"
+        android:layout_marginBottom="37dp"
+        android:text="@string/res_btn_kwh"
+        app:layout_constraintBottom_toTopOf="@+id/id_img_logo"
+        app:layout_constraintEnd_toStartOf="@+id/id_btn_watt"
+        app:layout_constraintTop_toBottomOf="@+id/id_btn_watt" />
+
+    <TextView
+        android:id="@+id/id_txtView_calc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:layout_marginBottom="36dp"
+        android:text="@string/res_txtView_calc"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/id_btn_volt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/id_img_logo"
+        android:layout_width="92dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/res_img_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_btn_kwh"
+        app:srcCompat="@drawable/logola" />
+
+</android.support.constraint.ConstraintLayout>
