@@ -12,6 +12,6 @@ public class InputActivity extends AppCompatActivity {
         setContentView(R.layout.activity_input);
         TextView input1 = findViewById(R.id.id_txtView_input1);
         TextView input2 = findViewById(R.id.id_txtView_input2);
-        
+
     }
 }
