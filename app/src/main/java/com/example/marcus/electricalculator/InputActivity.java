@@ -19,18 +19,32 @@ public class InputActivity extends AppCompatActivity {
     TextView input2;
     TextView input3;
     TextView output;
+    TextView lblInput1;
+    TextView lblInput2;
     Button btnCalc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.input);
+        lblInput1 = findViewById(R.id.id_txt_input1);
+        lblInput2 = findViewById(R.id.id_txt_input2);
         input1 = findViewById(R.id.id_edTxt_input1);
         input2 = findViewById(R.id.id_edTxt_input2);
         input3 = findViewById(R.id.id_edTxt_input3);
         output = findViewById(R.id.id_txt_result);
         btnCalc = findViewById(R.id.id_btn_calc);
         btnCalc.setOnClickListener(clickListener);
+        if(z==1) {
+            lblInput1.setText("Widerstand in Ohm");
+            lblInput2.setText("Strom in Ampere");
+        } else if(z==2) {
+            lblInput1.setText("Spannung in Volt");
+            lblInput2.setText("Widerstand in Ohm");
+        } else {
+            lblInput1.setText("Spannung in Volt");
+            lblInput2.setText("Strom in Ampere");
+        }
     }
 
     public final View.OnClickListener clickListener = new View.OnClickListener() {
@@ -54,7 +68,7 @@ public class InputActivity extends AppCompatActivity {
                         output.setText(Float.toString(leistung) + " Watt"); //(String.valueOf(leistung));
                     } else {
                         int dauer = Integer.valueOf(input3.getText().toString());
-                        float arbeit = (Float.valueOf(input2.getText().toString())) * (Float.valueOf(input1.getText().toString())) * dauer; // p = u * i * t
+                        float arbeit = (Float.valueOf(input2.getText().toString())) * (Float.valueOf(input1.getText().toString())) * ((dauer)/60); // p = u * i * t
                         output.setText(Float.toString(arbeit) + " kWh"); //(String.valueOf(arbeit));
                     }
                     break;
