@@ -5,10 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainElectric extends AppCompatActivity {
 
-    int x = 0;
+    static int x = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +27,7 @@ public class MainElectric extends AppCompatActivity {
         btnKwh.setOnClickListener(clickListener);
     }
 
-    private final View.OnClickListener clickListener = new View.OnClickListener() {
+    public final View.OnClickListener clickListener = new View.OnClickListener() {
 
         @Override
         public void onClick(View view) {

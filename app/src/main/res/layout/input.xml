@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="81dp">
+
+    <TextView
+        android:id="@+id/id_txt_input1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:text="@string/res_lbl_input1"
+        app:layout_constraintEnd_toStartOf="@+id/id_edTxt_input1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/id_edTxt_input1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="86dp"
+        android:layout_marginLeft="86dp"
+        android:layout_marginEnd="86dp"
+        android:layout_marginRight="86dp"
+        android:inputType="numberDecimal"
+        android:text="@string/res_zero"
+        app:layout_constraintBaseline_toBaselineOf="@+id/id_txt_input1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/id_txt_result" />
+
+    <TextView
+        android:id="@+id/id_txt_input2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:text="@string/res_lbl_input2"
+        app:layout_constraintBaseline_toBaselineOf="@+id/id_edTxt_input2"
+        app:layout_constraintEnd_toEndOf="@+id/id_txt_input1" />
+
+    <EditText
+        android:id="@+id/id_edTxt_input2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:inputType="numberDecimal"
+        android:text="@string/res_zero"
+        app:layout_constraintStart_toStartOf="@+id/id_edTxt_input1"
+        app:layout_constraintTop_toBottomOf="@+id/id_edTxt_input1" />
+
+    <TextView
+        android:id="@+id/id_txt_input3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
+        android:text="@string/res_lbl_input3"
+        app:layout_constraintEnd_toEndOf="@+id/id_txt_input2"
+        app:layout_constraintTop_toBottomOf="@+id/id_txt_input2" />
+
+    <EditText
+        android:id="@+id/id_edTxt_input3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        android:inputType="numberDecimal"
+        android:text="@string/res_zero"
+        app:layout_constraintStart_toStartOf="@+id/id_edTxt_input2"
+        app:layout_constraintTop_toBottomOf="@+id/id_edTxt_input2" />
+
+    <TextView
+        android:id="@+id/id_txt_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginBottom="67dp"
+        android:text="@string/res_zero"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/id_btn_calc" />
+
+    <Button
+        android:id="@+id/id_btn_calc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="123dp"
+        android:layout_marginLeft="123dp"
+        android:layout_marginBottom="40dp"
+        android:text="@string/res_txtView_calc"
+        app:layout_constraintBottom_toTopOf="@+id/id_txt_result"
+        app:layout_constraintStart_toStartOf="parent" />
+</android.support.constraint.ConstraintLayout>
